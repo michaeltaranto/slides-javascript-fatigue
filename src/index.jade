@@ -1,0 +1,722 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Fighting Javascript Fatigue
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+  
+      section.centered
+        h1 😴<br/>Fighting Javascript Fatigue
+
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 &ldquo;Extreme tiredness caused by library churn in Github&rsquo;s most active community&rdquo;
+
+      section
+        h1 Fatigue strikes down many&hellip; 💤
+        
+      section
+        h1 Developers 🤓
+        
+      section
+        h1 Companies 🏢
+        
+      section
+        h1 Customers 🛍
+
+      section
+        h1 How can we protect our products? 💂
+
+      section.emphatic(data-bespoke-backdrop="seek")
+        div.seek
+        
+      section
+        h1 .NET MVC + Razor templates
+          
+      section
+        h1 Migrating to micro service backend 🐜
+        
+      section
+        h1 Frontend was busy building Cathedrals ⛪️
+          
+      section
+        h1 Monolith Knockout or Angular SPAs
+
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Products were tightly<br/>coupled to frameworks 
+      
+      section
+        h1 Separate applications for 🖥 and 📱
+        
+      section
+        h1 Every rebuild was essentially 👶🛁💦
+        
+      section.emphatic(data-bespoke-backdrop="hack")
+        h1 Hackathon #1 🚀
+        h1 Node server,
+        h1 Universal React,
+        h1 Responsive web,
+        h1 SEO
+
+      section.centered
+        h1 🌧🌧🌧<br/>🏆🏆🏆
+        
+      section
+        h1 Some time the following week...
+
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 &ldquo;How can we protect ourselves<br/>against this churn?&rdquo;
+
+      section
+        h1 What hurts the most when rebuilding? 🤕
+
+      section
+        h1 Business rules 
+
+      section
+        h1 SEO (routing)
+
+      section
+        h1 Consistent visual style
+        
+      section
+        h1 Success would mean<br />decoupling all of these 
+
+      section
+        h1 All of these needed to<br/>outlive any framework&hellip;
+        
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 What if we could npm install<br />our business rules?
+
+      section
+        h1 Focused 👁<br/>Vanilla 🍦<br />Tested ✅<br />Pure functions 😇
+        
+      section.refine
+      
+      section
+        pre
+          code.language-javascript.
+            import  { refine } from 'seek-refine-job-search';
+            
+            const params = {
+              keywords: 'javascript',
+              salaryFrom: 60000
+            };
+            
+            const refinements = refine(params);
+      
+      section
+        pre
+          code.language-javascript.
+            {
+              &hellip;
+              salary: {
+                to: [
+                  { label: '$30k', value: '30000', isActive: false },
+                  { label: '$40k', value: '40000', isActive: false },
+                  { label: '$50k', value: '50000', isActive: false },
+                  { label: '$60k', value: '60000', isActive: true },
+                  { label: '$70k', value: '70000', isActive: false, refineParams: { &hellip; },
+                  { label: '$80k', value: '80000', isActive: false, refineParams: { &hellip; },
+                  { label: '$100k', value: '100000', isActive: false, refineParams: { &hellip; },
+                  { label: '$120k', value: '120000', isActive: false, refineParams: { &hellip; },
+                  { label: '$150k', value: '150000', isActive: false, refineParams: { &hellip; },
+                  { label: '$200k', value: '200000', isActive: false, refineParams: { &hellip; },
+                  { label: '$200k+', value: '999999', isActive: false, refineParams: { &hellip; } }
+                ]
+              }
+              &hellip;
+            }
+      
+      section
+        pre
+          code.language-javascript.
+            {
+              label: '$100k',
+              value: '100000',
+              isActive: false,
+              refineParams: {
+                keywords: 'javascript',
+                salaryFrom: 60000,
+                salaryTo: 100000
+              }
+            }
+      
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Pure functions are ideal<br/>for unit testing
+        
+      section
+        pre
+          code.language-javascript.
+            const cases = [
+              {
+                input: { &hellip; },
+                output: { &hellip; },
+                should: 'given input should yield output'
+              },
+              &hellip;
+            ];
+            
+      section
+        pre
+          code.language-javascript.
+            import  { refine } from 'seek-refine-job-search';
+            
+            describe('Salary refinement', () => {
+              cases.forEach(({ input, output, should }) => {
+                it(should, () => {
+                  expect(refine(input)).to.deep.equal(output);
+                });
+              });
+            });
+      
+      section
+        h1 How could we prove our<br/>approach to the business?
+        
+      section.white
+        iframe(src='http://dev.seek.com.au:5000/jobs')
+
+      section
+        h1 Clarified what is a business rule<br/>and what is the experience.
+          
+      section
+        h1 Enormous flexibility with the UX
+        h2 Like building a WinAmp skin ⚡️
+        
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Frameworks 😻 pure functions
+      
+      section
+        pre
+          code.language-javascript.
+            import { refine } from 'seek-refine-job-search';
+
+            // Pass query, receive refinement view model
+            const refinements = refine(getCurrentQuery());
+
+            render() {
+              return &lt;RefinePanel refinements={refinements} /&gt;
+            }
+            
+      section
+        iframe(src='http://www.seek.com.au/jobs')
+        //- demo max salary not able to be below selected min
+        
+      section
+        h1 Have we decoupled our<br/>business logic from<br/>the churn?
+        
+      section.emphatic(data-bespoke-backdrop="hack")
+        h1 Hackathon #2 🚀
+        h1 React Native
+        h2 3 developers, 2 days, no iOS experience
+      
+      section
+        pre
+          code.language-javascript.
+            import { refine } from 'seek-refine-job-search';
+
+            const refinements = refine(this.props.params);
+            
+            render() {
+              return (
+                &lt;View style={styles.salaryRange}&gt;
+                  &lt;Text&gt;Min&lt;/Text&gt;
+                  &lt;PickerIOS&gt;
+                  {
+                    refinements.salary.from
+                      .filter(salary => salary.isActive)
+                      .map(({ value, label }) => (
+                        &lt;PickerIOS.Item value={value} label={label} /&gt;
+                      ))
+                  }
+                  &lt;/PickerIOS&gt;
+                &lt;/View&gt;
+              );
+            }
+      
+      section.centered
+        h1.epic 📱
+        
+      section.centered
+        h1 🙅🏆🏻
+        h2 ...but we did it 🎉
+      
+      section.emphatic(data-bespoke-backdrop="chapter")
+        h1 Decoupling SEO 🐛
+        
+      section
+        h1 URLs are king 👑
+        
+      section
+        h1 Given their importance,<br/>they lacked love 💔
+        
+      section
+        h1 Inconsistently replicated,<br/>highly coupled code
+      
+      section
+        pre
+          code.language-javascript.
+            [
+              '/jobs/:worktype',
+              '/jobs/in-:location',
+              '/jobs/in-:location/in-:suburb',
+              '/jobs/in-:location/in-:suburb/:worktype',
+              '/jobs/in-:location/:worktype',
+              '/jobs/in-:location/:area',
+              '/jobs/in-:location/:area/:worktype',
+              '/jobs-in-:classification',
+              '/jobs-in-:classification/:worktype',
+              '/jobs-in-:classification/in-:location',
+              '/jobs-in-:classification/in-:location/in-:suburb',
+              '/jobs-in-:classification/in-:location/in-:suburb/:worktype',
+              '/jobs-in-:classification/in-:location/:worktype',
+              '/jobs-in-:classification/in-:location/:area',
+              '/jobs-in-:classification/in-:location/:area/:worktype',
+              '/jobs-in-:classification/:subclassification',
+              '/jobs-in-:classification/:subclassification/in-:location',
+              '/jobs-in-:classification/:subclassification/in-:location/in-:suburb',
+              '/jobs-in-:classification/:subclassification/in-:location/in-:suburb/:worktype',
+              '/jobs-in-:classification/:subclassification/in-:location/:worktype',
+              '/jobs-in-:classification/:subclassification/in-:location/:area',
+              '/jobs-in-:classification/:subclassification/in-:location/:area/:worktype',
+              '/jobs-in-:classification/:subclassification/:worktype'
+            ].forEach(function(friendlyUrl) {
+                $stateProvider.state(friendlyUrl.replace(/[\/\:\{\|\}]/g, '_'), {
+                  url: friendlyUrl,
+                  resolve: {
+                    redirect: function () {
+                      var goToResults = function (searchQueryString) {
+                        $location.replace().path('/jobsearch').search(searchQueryString);
+                      },
+                      goToHome = function () {
+                        $location.replace().path('/');
+                      };
+
+                      return searchStateParamsConverter
+                        .getQueryStringFromFriendlyUrlStateParams($stateParams)
+                        .then(goToResults, goToHome);
+                    }]
+                  }
+                });
+              });
+      
+      section
+        pre
+          code.language-xml.
+            &lt;if url="^/information-communication-technology-jobs(.*)$"&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/all(.*)?$" to="/jobs-in-information-communication-technology$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/in-(.*)/(.*)?$" to="/jobs-in-information-communication-technology/in-$1/$2$3" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/(full-time|part-time|contract|casual)(.*)?$" to="/jobs-in-information-communication-technology/$1$2" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/architects(.*)?$" to="/jobs-in-information-communication-technology/architects$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/business-systems-analysts(.*)?$" to="/jobs-in-information-communication-technology/business-systems-analysts$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/computer-operators(.*)?$" to="/jobs-in-information-communication-technology/computer-operators$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/consultants(.*)?$" to="/jobs-in-information-communication-technology/consultants$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/database-development-administration(.*)?$" to="/jobs-in-information-communication-technology/database-development-administration$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/developers-programmers(.*)?$" to="/jobs-in-information-communication-technology/developers-programmers$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/engineering-hardware(.*)?$" to="/jobs-in-information-communication-technology/engineering-hardware$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/engineering-network(.*)?$" to="/jobs-in-information-communication-technology/engineering-network$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/engineering-software(.*)?$" to="/jobs-in-information-communication-technology/engineering-software$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/help-desk-it-support(.*)?$" to="/jobs-in-information-communication-technology/help-desk-it-support$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/management(.*)?$" to="/jobs-in-information-communication-technology/management$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/networks-systems-administration(.*)?$" to="/jobs-in-information-communication-technology/networks-systems-administration$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/product-management-development(.*)?$" to="/jobs-in-information-communication-technology/product-management-development$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/programme-project-management(.*)?$" to="/jobs-in-information-communication-technology/programme-project-management$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/sales-pre-post(.*)?$" to="/jobs-in-information-communication-technology/sales-pre-post$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/security(.*)?$" to="/jobs-in-information-communication-technology/security$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/team-leaders(.*)?$" to="/jobs-in-information-communication-technology/team-leaders$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/technical-writing(.*)?$" to="/jobs-in-information-communication-technology/technical-writing$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/telecommunications(.*)?$" to="/jobs-in-information-communication-technology/telecommunications$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/testing-quality-assurance(.*)?$" to="/jobs-in-information-communication-technology/testing-quality-assurance$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/web-development-production(.*)?$" to="/jobs-in-information-communication-technology/web-development-production$1" permanent="true" /&gt;
+              &lt;redirect url="^/information-communication-technology-jobs/other(.*)?$" to="/jobs-in-information-communication-technology/other$1" permanent="true" /&gt;
+            &lt;/if&gt;
+            
+      section
+        h1 Over 700 lines of static,<br/>untested XML config&hellip; 😩
+        
+      section.seo
+      
+      section
+        h1 Seo-As-A-Service 🍽
+      
+      section
+        pre
+          code.language-javascript.
+            import { routes } from 'seek-jobs-seo';
+
+            export default (
+              &lt;Route component={App}&gt;
+                &lt;Route path="/" component={Home} /&gt;
+                {
+                  routes.map(path =>
+                    &lt;Route path={path} component={SearchResults} /&gt;)
+                }
+              &lt;/Route&gt;
+            );
+            
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Router has no knowledge<br/>of friendly urls
+         
+      section
+        h1 Handling links inside the app
+        
+      section
+        h1 Search Params 👉 Friendly Url
+        h2 eg: { classification: 1200 } 👉 '/jobs-in-accounting'
+        
+      section
+        h1 Friendly Url 👉 Search Params
+        h2 eg: '/jobs-in-accounting' 👉 { classification: 1200 }
+        
+      section
+        pre
+          code.language-javascript.
+            {
+              should: 'qualify valid graduatesearch with work type',
+              input: {
+                path: '/jobs',
+                query: {
+                  graduatesearch: 'true',
+                  worktype: '242'
+                }
+              },
+              output: { path: '/jobs/graduate/full-time', query: {} }
+            }
+      
+      section
+        pre
+          code.language-javascript.
+            import { qualifyUrl } from 'seek-jobs-seo';
+            
+            render() {
+              const { path, query } = qualifyUrl(locale, path, query);
+
+              return (
+                &lt;Link to={`${path}?${query}`}&gt;
+                  { children }
+                &lt;/Link&gt;
+              );
+            }
+            
+      section
+        iframe(src='http://www.seek.com.au/jobs')
+        //- demo hrefs updating
+        
+      section
+        h1 Friendly URLs,<br/>Qualifying,<br/>Meta Descriptions,<br/>Canonicals
+      
+      section
+        h1 All in one place 👌
+        
+      section
+        h1 All vanilla 🍦<br/>Framework agnostic 🙈<br/>Protected from the churn 👮
+      
+      section.emphatic(data-bespoke-backdrop="chapter")
+        h1 How can we reduce friction<br/>to separating modules? 😬
+        
+      section
+        h1 Module boundaries are<br/>not always obvious 🕵
+        
+      section
+        h1 How can we <em>stage</em> modules<br/>while proving out the api
+        
+      section
+        h1 Webpack
+        h2 Resolving module directories
+        
+      section
+        pre
+          code.language-javascript.
+            // Webpack config
+            module.exports = {
+              &hellip;
+              resolve: {
+                modulesDirectories: [ 'node_modules', 'wip_modules' ]
+              }
+              &hellip;
+            };
+            
+      section
+        pre
+          code.language-javascript.
+            /app
+              /components
+              /node_modules
+              /wip_modules
+                /seek-jobs-api
+              
+      section.centered
+        h1 Using staging modules:
+        pre
+          code.language-javascript.
+            import { search } from 'seek-jobs-api-client';
+              
+      section
+        h1 Extract 🛫,<br />Test ✅,<br />Document 📜,<br/>Install 🛬
+
+      section.centered
+        h1 Using `node_modules`:
+        pre
+          code.language-javascript.
+            import { search } from 'seek-jobs-api-client';
+            
+      section
+        h1 Started open sourcing 😍
+
+      section.emphatic(data-bespoke-backdrop="chapter")
+        h1 If unit testing happens outside,<br/>what happens inside? 🤔
+
+      section
+        h1 Find confidence without<br/>testing yourself into a corner.
+      
+      section
+        h1 Webdriver tests 😱
+        
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 The application is an integration module
+        
+      section
+        h1 Want to avoid re-coupling with tests 🔗
+        
+      section
+        h1 We&rsquo;ve seen this pay off already 🤑
+
+      section
+        h1 Needed to introduce a<br/>state management library
+
+      section.centered
+        h1 Enter Flummox&hellip;
+        pre
+          code.language-javascript.
+            npm install flummox --save
+        
+      section
+        h1 Universal 🌏,<br/>Light weight 🍃,<br/>Clean API 👌
+        
+      section
+        h1 28 days later&hellip; 🗓
+      
+      section.deprecation
+        //-https://github.com/acdlite/flummox/blob/8f0338d5e13278b82e1c5358a00b9095bfb0cf02/README.md
+        
+      section
+        h1 Churn had struck.<br />Fatigue was setting in. 😴
+        
+      section.centered
+        h1 Switched to Redux
+        pre
+          code.language-javascript.
+            npm install react-redux --save
+        
+      section.passing
+        
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Tests provide confidence<br/>to refactor, not hinder it 💪
+        
+      section
+        
+      section.emphatic(data-bespoke-backdrop="chapter")
+        h1 Visual Styling 🎨
+        
+      section
+        h1 Suffered just like our business logic 😔
+        
+      section
+        h1 Rebuilding the same guidelines<br/>again and again and again
+        
+      section
+        h1 Each time coupled to a framework 🔗
+        
+      section.centered
+        h1 🔥⏲💰
+        
+      section
+        h1 Standardised on preprocessor &mdash; LESS
+
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Can we share design guidelines<br/>if not components? 🛤
+      
+      section
+        pre
+          code.language-javascript.
+            // Webpack config
+            module.exports = {
+              &hellip;
+              resolve: {
+                modulesDirectories: [ 'node_modules', 'wip_modules' ]
+              }
+              &hellip;
+            };
+            
+      section.centered
+        h1 Leverage staging modules
+        pre
+          code.language-javascript.
+              /wip_modules
+                /theme
+                  /grid
+                  /palette
+                  /type
+                  /theme.less
+      
+      section.centered
+        h1 theme.less
+        pre
+          code.language-css.
+            @import (reference) 'grid/grid.less'
+            @import (reference) 'palette/palette.less'
+            @import (reference) 'type/type.less'
+      
+      section.centered
+        h1 palette.less
+        pre
+          code.language-css.
+            @sk-blue: #0d3880;
+            @sk-pink: #e60278;
+            @sk-green: #178a00;
+      
+      section.centered
+        h1 type.less
+        pre
+          code.language-css.
+            @base-font-stack: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+            @base-font-size: 10;
+            @font-descender-height-scale: 0.12;
+
+            @hero-type-row-span: 5;
+            @hero-type-scale: 4.2;
+
+            @headline-type-row-span: 4;
+            @headline-type-scale: 2.8;
+
+            @heading-type-row-span: 3;
+            @heading-type-scale: 2.1;
+
+            @subheading-type-row-span: 3;
+            @subheading-type-scale: 1.8;
+
+            @standard-type-row-span: 2;
+            @standard-type-scale: 1.4;
+
+      section
+        h1 No resulting CSS, just guidelines 📐
+
+      section
+        pre
+          code.language-css.
+            @import (reference) '~theme'
+            
+            .button {
+              .touchableText();
+              background-color: @sk-pink;
+              color: @sk-white;
+              cursor: pointer;
+            }
+            
+      section
+        pre
+          code.language-javascript.
+            import styles from './button.less';
+
+            render() {
+              return (
+                &lt;button className={styles.button}&gt;
+                  { children }
+                &lt;/button&gt;
+              );
+            }
+            
+      section
+        h1 CSSModules gives us style encapsulation 💊
+        
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 CSSModules protect us<br/>from framework churn ⚔
+        
+      section
+        h1 Same styles could be imported<br/>to an Angular component 💣
+        
+      section
+        h1 CSS now gives our design guidelines<br/>what vanilla gives our business logic 💂
+      
+      section
+        h1 What if we could share the components&hellip; 🤔
+      
+      section.emphatic(data-bespoke-backdrop="hack")
+        h1 Hackathon #3 🚀
+        h1 Living Style Guide 🎨
+        
+      section.styleguide
+        
+      section
+        h1 Core design principles 📐🖍
+        
+      section
+        h1 Suite of React components<br/>that implement the guidelines
+        
+      section
+        pre
+          code.language-javascript.
+            import { Button, StarIcon } from 'seek-style-guide/react';
+            
+            render() {
+              &lt;Button&gt;
+                &lt;StarIcon /&gt;
+                Save
+              &lt;/Button&gt;
+            }
+            
+      section.sgapp
+      
+      section
+        h1 Huge development speed up 🏎
+      
+      section
+        h1 Makes consistent visual style easier
+      
+      section
+        h1 Style guide is now powering 5 products 🔌
+        
+      section
+        h1 Canonical list of core<br/>components and guidelines
+        
+      section
+        h1 Switching from React is<br/>essentially swapping templates
+      
+      section.emphatic(data-bespoke-backdrop="chapter")
+        h1 Learnings 📚
+        
+      section
+        h1 Keep your core vanilla 🍦
+        
+      section
+        h1 Micro library mentality<br/>focusing of pure functions 😇
+        
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 &ldquo;Best way to reduce complexity<br/>in your app is to take it away&rdquo;
+          
+      section
+        h1 Choose frameworks that<br/>solve actual problems
+        h2 Beware of blogs
+            
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        h1 Engineer for change, it&rsquo;s inevitable
+      
+      section
+        h1 Please no more 👶🛁💦
+
+      section.emphatic(data-bespoke-backdrop="emphatic")
+        div.me
+        h1 @michaeltaranto
+        h1 github.com/mjt01
+        h1 bit.ly/javascript-fatigue
+        
+      section.emphatic(data-bespoke-backdrop="seek")
+        div.seek
+        h1.hiring Come help us finish what we&rsquo;ve started&hellip;
+
+    script(src='build/build.js')

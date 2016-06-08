@@ -1,0 +1,143 @@
+// New to Stylus? Check out http://learnboost.github.io/stylus
+// Use modern CSS thanks to Autoprefixer: https://github.com/ai/autoprefixer
+
+// Import CSS from "node_modules" and "bower_components"
+// thanks to Stylus' "import css" and "paths" options
+
+@import 'prism/themes/prism-okaidia.css'
+// Check out "bower_components/prism/themes/" for available themes
+
+/* cyrillic */
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url('../fonts/cKr_e199f0xMkxMkRbEJXwsYbbCjybiHxArTLjt7FRU.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url('../fonts/3Annd_XP-99FcGbOpm6fVAsYbbCjybiHxArTLjt7FRU.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url('../fonts/HrI4ZJpJ3Fh0wa5ofYMK8QzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.bespoke-slide
+  font-family: 'Poiret One', cursive
+  width: 1024px
+  height: 768px
+  margin-left: -(@width / 2)
+  margin-top: -(@height / 2)
+  &:not(.centered):not(.emphatic)
+    align-items: flex-start
+    text-align: left
+
+iframe
+  border: 0
+  width: 100%
+  height: 100%
+
+h1
+  font-family: 'Poiret One', cursive
+  font-style: normal
+
+h2
+  font-family: 'Poiret One', cursive
+
+pre
+  margin: 0 auto!important
+
+code
+  font-family: consolas !important
+  font-size: 0.8em
+
+.token
+  &.string
+  &.attr-value
+    color: #69F0AE
+  &.keyword
+  &.attr-name
+    color: #5AEAFB
+  &.punctuation
+    color: #a8a8a8
+  &.regex
+  &.number
+    color: #ff8a80
+  &.function
+  &.tag
+    color: #D1C4E9
+
+.bespoke-parent
+  background-color: #404040
+
+.bespoke-backdrop.emphatic
+  background-color: #69F0AE
+
+.bespoke-backdrop.hack
+  background-color: #5AEAFB
+
+.bespoke-backdrop.chapter
+  background-color: #FFF59D
+
+.bespoke-backdrop.seek
+  background-color: #000
+
+.emphatic
+  background-color: transparent
+  color: #424242
+
+.white
+  background-color: #fff
+
+.epic
+  font-size: 6em
+
+.deprecation
+  background: url('../images/flummox-deprecation.png') center center no-repeat
+  background-size: contain
+
+.refine
+  background: url('../images/refine-gh.png') center center no-repeat
+  background-size: contain
+
+.seo
+  background: url('../images/seo-gh.png') center center no-repeat
+  background-size: contain
+
+.passing
+  background: url('../images/passing.png') center center no-repeat
+  background-size: contain
+
+.styleguide
+  background: url('../images/styleguide.png') center center no-repeat
+  background-size: contain
+
+.sgapp
+  background: url('../images/sgapp.png') center center no-repeat
+  background-size: contain
+
+.me
+  background: url('../images/me.png') center center no-repeat
+  background-size: 200px 200px
+  width: 200px
+  height: 200px
+  border-radius: 50%
+  margin-bottom: 18px
+
+.seek
+  background: url('../images/seek.svg') center center no-repeat
+  background-size: 200px 200px
+
+.hiring
+  margin-top: 350px
+  color: #fff
