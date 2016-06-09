@@ -32,7 +32,7 @@ html
       section
         h1 How can we protect our products? 💂
 
-      section.emphatic(data-bespoke-backdrop="seek")
+      section.emphatic(data-bespoke-backdrop="seekbg")
         div.seek
         
       section
@@ -178,8 +178,11 @@ html
       section
         h1 How could we prove our<br/>approach to the business?
         
-      section.white
-        iframe(src='http://dev.seek.com.au:5000/jobs')
+      section
+        h1 Demo to stakeholders without CSS 🚫💄
+        
+      section.emphatic(data-bespoke-backdrop="nocss")
+        //- iframe(src='http://dev.seek.com.au:5000/jobs')
 
       section
         h1 Clarified what is a business rule<br/>and what is the experience.
@@ -203,8 +206,8 @@ html
               return &lt;RefinePanel refinements={refinements} /&gt;
             }
             
-      section
-        iframe(src='http://www.seek.com.au/jobs')
+      section.emphatic(data-bespoke-backdrop="refinedemo")
+        //- iframe(src='http://www.seek.com.au/jobs')
         //- demo max salary not able to be below selected min
         
       section
@@ -239,8 +242,9 @@ html
               );
             }
       
-      section.centered
-        h1.epic 📱
+      section.emphatic(data-bespoke-backdrop="reactnative")
+      //- section.centered
+        //- h1.epic 📱
         
       section.centered
         h1 🙅🏆🏻
@@ -403,8 +407,8 @@ html
               );
             }
             
-      section
-        iframe(src='http://www.seek.com.au/jobs')
+      section.emphatic(data-bespoke-backdrop="links")
+        //- iframe(src='http://www.seek.com.au/jobs')
         //- demo hrefs updating
         
       section
@@ -518,7 +522,7 @@ html
       section.emphatic(data-bespoke-backdrop="emphatic")
         h1 Tests provide confidence<br/>to refactor, not hinder it 💪
         
-      section
+      //- section
         
       section.emphatic(data-bespoke-backdrop="chapter")
         h1 Visual Styling 🎨
@@ -714,9 +718,5 @@ html
         h1 @michaeltaranto
         h1 github.com/mjt01
         h1 bit.ly/javascript-fatigue
-        
-      section.emphatic(data-bespoke-backdrop="seek")
-        div.seek
-        h1.hiring Come help us finish what we&rsquo;ve started&hellip;
 
     script(src='build/build.js')
